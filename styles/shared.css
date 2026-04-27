@@ -807,3 +807,8 @@ footer .footer-logo .logo-sub { color: var(--accent-soft); }
   .about-text h2 { font-size: 28px; }
   footer .footer-grid { grid-template-columns: 1fr; }
 }
+/* Make the footer logo legible on the dark background */
+footer .footer-logo img.logo-svg {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
