@@ -15,8 +15,6 @@
       "destination": "https://storywork.co/",
       "permanent": true
     },
-    { "source": "/writing", "destination": "https://laurenshippy.substack.com", "permanent": true },
-    { "source": "/writing/(.*)", "destination": "https://laurenshippy.substack.com/$1", "permanent": true },
     { "source": "/businessbuilder", "destination": "/businessbuilders", "permanent": true },
     { "source": "/business-builder", "destination": "/businessbuilders", "permanent": true },
     { "source": "/business-builders", "destination": "/businessbuilders", "permanent": true },

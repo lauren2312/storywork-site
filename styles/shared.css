@@ -631,6 +631,155 @@ footer .footer-logo .logo-sub { color: var(--accent-soft); }
   color: var(--ink);
 }
 
+/* =================== BLOG INDEX + POSTS =================== */
+.blog-list {
+  display: grid;
+  gap: 0;
+  margin-top: 30px;
+  border-top: 1px solid var(--rule);
+}
+.blog-card {
+  display: block;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+  transition: padding-left .25s;
+}
+.blog-card:hover { padding-left: 12px; }
+.blog-card .post-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.blog-card h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+.blog-card:hover h3 { color: var(--accent); }
+.blog-card p {
+  font-size: 18px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+/* Blog post (article) layout */
+.post-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 100px 32px 80px;
+}
+.post-article .post-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.post-article h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+.post-article .lead {
+  font-size: 23px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 44px;
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+}
+.post-article h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 18px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.post-article h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.post-article p {
+  font-size: 19px;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  color: var(--ink);
+}
+.post-article ul, .post-article ol {
+  margin-bottom: 22px;
+  padding-left: 24px;
+}
+.post-article li {
+  font-size: 19px;
+  line-height: 1.65;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.post-article a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+.post-article a:hover { color: var(--ink); border-color: var(--ink); }
+.post-article blockquote {
+  margin: 32px 0;
+  padding: 4px 28px;
+  border-left: 3px solid var(--accent-light);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 20px;
+}
+.post-article hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 44px 0;
+}
+.post-back {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 3px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.post-back:hover { color: var(--accent); border-color: var(--accent); }
+
+.post-cta {
+  margin-top: 60px;
+  padding: 36px 32px;
+  background: var(--paper-warm);
+  border-left: 3px solid var(--accent);
+}
+.post-cta p {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
 /* =================== WRITING / SUBSTACK FEED =================== */
 .posts-grid {
   display: grid;
@@ -786,6 +935,16 @@ footer .footer-logo .logo-sub { color: var(--accent-soft); }
   .approach-grid { grid-template-columns: 1fr; gap: 30px; }
   .approach-item h4 { font-size: 22px; }
 
+  /* Blog */
+  .post-article { padding: 60px 24px 60px; }
+  .post-article h1 { font-size: 36px; }
+  .post-article .lead { font-size: 19px; padding-left: 16px; }
+  .post-article h2 { font-size: 26px; }
+  .post-article h3 { font-size: 22px; }
+  .post-article p, .post-article li { font-size: 18px; }
+  .blog-card h3 { font-size: 26px; }
+  .blog-card p { font-size: 17px; }
+
   /* CTA + form */
   .cta { padding: 70px 0 80px; }
   .contact-form .form-row { grid-template-columns: 1fr; }
@@ -806,9 +965,4 @@ footer .footer-logo .logo-sub { color: var(--accent-soft); }
   section h2 { font-size: 30px; }
   .about-text h2 { font-size: 28px; }
   footer .footer-grid { grid-template-columns: 1fr; }
-}
-/* Make the footer logo legible on the dark background */
-footer .footer-logo img.logo-svg {
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
 }
