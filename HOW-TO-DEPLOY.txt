@@ -1,0 +1,57 @@
+========================================================
+  MASTER DEPLOY — one drag, one commit, done
+========================================================
+
+This folder is the ENTIRE storywork.co site.
+Everything you need to update all in one go.
+
+========================================================
+  STEP-BY-STEP (about 2 minutes)
+========================================================
+
+1. In Safari, paste this URL into the address bar:
+
+     https://github.com/lauren2312/storywork-site/upload/main
+
+   That takes you directly to the upload page for the
+   repo root.
+
+2. In Finder, open this folder (storywork-MASTER on your
+   Desktop).
+
+3. Press Cmd+A to select ALL files and folders inside.
+   (Everything: assets folder, businessbuilders folder,
+    styles folder, writing folder, index.html, robots.txt,
+    sitemap.xml, vercel.json, README.md.)
+
+4. Drag ALL of them together onto GitHub's "Drag files
+   here" area.
+
+   GitHub will show a list of every file, preserving
+   folder structure automatically. It will OVERWRITE
+   files that already exist with matching paths.
+
+5. Scroll down. Commit message:
+      Full site update
+   Click green Commit changes button.
+
+6. Wait 30-60 seconds. Vercel auto-deploys everything.
+
+7. Hard refresh storywork.co: Cmd + Option + R.
+
+========================================================
+  WHAT'S IN THIS UPDATE
+========================================================
+
+- Instagram + Facebook removed from footer socials
+- 10XGen callout card in "Beyond the work"
+- Real 10XGen X logo (dark ink square)
+- Beyond the work: 3 cards in one horizontal row
+  (Book / Podcast / 10XGen), each with thumbnail on top
+- Footer SW logo: white against dark teal (was
+  blending in before)
+- Mobile hamburger menu with teal overlay
+- All schema.org / SEO / canonical URLs preserved
+- Every image, font, and asset unchanged from live
+
+========================================================

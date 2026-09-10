@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="StoryWork logo">
+  <!--
+    Two overlapping squares form an 8-point star.
+    Square 1 (axis-aligned) corners at (37,37) and (163,163), side 126.
+    Square 2 (rotated 45°) tips at (100,10) (190,100) (100,190) (10,100).
+    Each edge crosses the other square's edges at two interior points.
+    For square 1's horizontal/vertical edges, crossings at offsets of ~36.6 from each corner.
+    Lines drawn with subtle breaks at each crossing point (gap ~2 units).
+  -->
+  <g fill="none" stroke="#A89373" stroke-width="2.6" stroke-linecap="butt">
+    <!-- ============ Square 1 (axis-aligned) ============ -->
+    <!-- Top edge (y=37, x: 37 to 163): crossings at x=73.6 and x=126.4 -->
+    <line x1="37" y1="37" x2="72.5" y2="37"/>
+    <line x1="74.7" y1="37" x2="125.3" y2="37"/>
+    <line x1="127.5" y1="37" x2="163" y2="37"/>
+    <!-- Right edge (x=163, y: 37 to 163): crossings at y=73.6 and y=126.4 -->
+    <line x1="163" y1="37" x2="163" y2="72.5"/>
+    <line x1="163" y1="74.7" x2="163" y2="125.3"/>
+    <line x1="163" y1="127.5" x2="163" y2="163"/>
+    <!-- Bottom edge (y=163, x: 163 to 37) -->
+    <line x1="163" y1="163" x2="127.5" y2="163"/>
+    <line x1="125.3" y1="163" x2="74.7" y2="163"/>
+    <line x1="72.5" y1="163" x2="37" y2="163"/>
+    <!-- Left edge (x=37, y: 163 to 37) -->
+    <line x1="37" y1="163" x2="37" y2="127.5"/>
+    <line x1="37" y1="125.3" x2="37" y2="74.7"/>
+    <line x1="37" y1="72.5" x2="37" y2="37"/>
+
+    <!-- ============ Square 2 (rotated 45°) ============ -->
+    <!-- Top-right edge: (100,10) to (190,100). Crosses square 1 at (126.4, 37) and (163, 73.6). -->
+    <line x1="100" y1="10" x2="125.3" y2="35.3"/>
+    <line x1="127.5" y1="37.5" x2="161.4" y2="71.4"/>
+    <line x1="164.6" y1="74.6" x2="190" y2="100"/>
+    <!-- Bottom-right edge: (190,100) to (100,190). Crosses at (163,126.4) and (126.4,163). -->
+    <line x1="190" y1="100" x2="164.6" y2="125.4"/>
+    <line x1="161.4" y1="128.6" x2="127.5" y2="162.5"/>
+    <line x1="125.3" y1="164.7" x2="100" y2="190"/>
+    <!-- Bottom-left edge: (100,190) to (10,100). Crosses at (73.6,163) and (37,126.4). -->
+    <line x1="100" y1="190" x2="74.7" y2="164.7"/>
+    <line x1="72.5" y1="162.5" x2="38.6" y2="128.6"/>
+    <line x1="35.4" y1="125.4" x2="10" y2="100"/>
+    <!-- Top-left edge: (10,100) to (100,10). Crosses at (37,73.6) and (73.6,37). -->
+    <line x1="10" y1="100" x2="35.4" y2="74.6"/>
+    <line x1="38.6" y1="71.4" x2="72.5" y2="37.5"/>
+    <line x1="74.7" y1="35.3" x2="100" y2="10"/>
+  </g>
+
+  <!-- SW monogram in Cormorant Garamond (matches website) -->
+  <text x="100" y="120" text-anchor="middle"
+        font-family="Cormorant Garamond"
+        font-size="64" font-weight="500"
+        letter-spacing="-0.5"
+        fill="#0E4F56">SW</text>
+</svg>
