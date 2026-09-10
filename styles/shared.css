@@ -1,22 +1,22 @@
 /* =================================================================
-   StoryWork â€” shared stylesheet
+   StoryWork — shared stylesheet
    Used by index.html (homepage) and /businessbuilders/index.html
    ================================================================= */
 
 /* ============================================================
-   PALETTE â€” pulled from the StoryWork logo
+   PALETTE — pulled from the StoryWork logo
    Deep teal + warm tan + warm cream
    SWAP NOTE: refine these hex values once exact brand colors confirmed
    ============================================================ */
 :root {
-  --ink:         #0e4f56;   /* deep teal (logo SW) â€” primary text */
+  --ink:         #0e4f56;   /* deep teal (logo SW) — primary text */
   --ink-soft:    #4a5a60;   /* secondary text */
   --ink-mute:    #6e7a80;   /* tertiary text / metadata */
-  --paper:       #faf7f2;   /* warm cream â€” primary background */
-  --paper-warm:  #f3ede2;   /* warm cream tinted â€” secondary bg */
-  --accent:      #8c7853;   /* deeper brass â€” accent text, eyebrow */
-  --accent-light:#a89373;   /* warm tan (logo star) â€” decorative */
-  --accent-soft: #dcc9a8;   /* sand â€” soft surfaces, footer text */
+  --paper:       #faf7f2;   /* warm cream — primary background */
+  --paper-warm:  #f3ede2;   /* warm cream tinted — secondary bg */
+  --accent:      #8c7853;   /* deeper brass — accent text, eyebrow */
+  --accent-light:#a89373;   /* warm tan (logo star) — decorative */
+  --accent-soft: #dcc9a8;   /* sand — soft surfaces, footer text */
   --rule:        #d8d0bf;   /* hairline rule */
 }
 
@@ -100,7 +100,7 @@ nav.top .container {
 }
 .nav-cta:hover { background: var(--ink); color: var(--paper) !important; }
 
-/* Hamburger â€” hidden on desktop, revealed on mobile */
+/* Hamburger — hidden on desktop, revealed on mobile */
 .nav-hamburger { display: none; }
 
 /* =================== HERO =================== */
@@ -326,7 +326,7 @@ section .section-lead {
   flex-wrap: wrap;
 }
 
-/* =================== EXTRAS â€” BOOK / PODCAST =================== */
+/* =================== EXTRAS — BOOK / PODCAST =================== */
 .extras { background: var(--paper); }
 .extras-grid {
   display: grid;
