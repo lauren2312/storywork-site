@@ -330,17 +330,18 @@ section .section-lead {
 .extras { background: var(--paper); }
 .extras-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   margin-top: 14px;
 }
 .extra-card {
   background: var(--paper-warm);
-  padding: 40px 36px;
+  padding: 36px 30px;
   border-radius: 4px;
   display: flex;
-  gap: 28px;
-  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-start;
   transition: background .2s;
   text-decoration: none;
   color: inherit;
@@ -348,7 +349,7 @@ section .section-lead {
 .extra-card:hover { background: var(--accent-soft); }
 .extra-thumb {
   flex-shrink: 0;
-  width: 110px; height: 140px;
+  width: 120px; height: 150px;
   background: var(--ink);
   color: var(--paper);
   display: flex; align-items: center; justify-content: center;
@@ -368,8 +369,17 @@ section .section-lead {
   background: var(--accent-light);
   color: var(--ink);
   border-radius: 50%;
-  width: 110px; height: 110px;
+  width: 120px; height: 120px;
   font-size: 22px;
+}
+.extra-thumb.intensive {
+  background: transparent;
+  width: 120px; height: 120px;
+  padding: 0;
+  border-radius: 0;
+}
+.extra-thumb.intensive img {
+  border-radius: 16px;
 }
 .extra-card h4 {
   font-size: 28px;
@@ -558,6 +568,8 @@ footer .copyright {
 }
 footer .footer-logo .logo-words { color: var(--paper); }
 footer .footer-logo .logo-sub { color: var(--accent-soft); }
+/* Make the SW logo mark visible against the dark teal footer */
+footer .footer-logo .logo-svg { filter: brightness(0) invert(1) opacity(0.92); }
 
 /* =================== BUSINESS BUILDER PAGE EXTRAS =================== */
 .who-grid {
