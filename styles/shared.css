@@ -331,7 +331,7 @@ section .section-lead {
 .extras { background: var(--paper); }
 .extras-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-top: 14px;
 }
@@ -922,6 +922,7 @@ footer .footer-logo .logo-svg { filter: brightness(0) invert(1) opacity(0.92); }
   .offerings-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .approach-grid { grid-template-columns: 1fr; gap: 36px; }
+  .extras-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Mobile */
