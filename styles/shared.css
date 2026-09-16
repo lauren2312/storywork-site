@@ -10,8 +10,8 @@
    ============================================================ */
 :root {
   --ink:         #0e4f56;   /* deep teal (logo SW) — primary text */
-  --ink-soft:    #4a5a60;   /* secondary text */
-  --ink-mute:    #6e7a80;   /* tertiary text / metadata */
+  --ink-soft:    #384a50;   /* secondary text (darker for legibility) */
+  --ink-mute:    #5a6870;   /* tertiary text / metadata */
   --paper:       #faf7f2;   /* warm cream — primary background */
   --paper-warm:  #f3ede2;   /* warm cream tinted — secondary bg */
   --accent:      #8c7853;   /* deeper brass — accent text, eyebrow */
@@ -28,8 +28,9 @@ body {
   font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
   color: var(--ink);
   background: var(--paper);
-  line-height: 1.55;
-  font-size: 19px;
+  line-height: 1.6;
+  font-size: 20px;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -64,10 +65,10 @@ nav.top .container {
   display: flex; align-items: center; gap: 12px;
   text-decoration: none; color: var(--ink);
 }
-.logo-svg { width: 42px; height: 42px; flex-shrink: 0; }
+.logo-svg { width: 58px; height: 58px; flex-shrink: 0; }
 .logo-words {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-size: 26px;
+  font-size: 34px;
   font-weight: 500;
   letter-spacing: -0.005em;
   line-height: 1;
@@ -336,59 +337,58 @@ section .section-lead {
 }
 .extra-card {
   background: var(--paper-warm);
-  padding: 36px 30px;
+  padding: 36px 30px 34px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 24px;
   align-items: flex-start;
   transition: background .2s;
   text-decoration: none;
   color: inherit;
 }
 .extra-card:hover { background: var(--accent-soft); }
+
+/* Thumbnail wrapper — a fixed 150px-tall region so all cards align */
 .extra-thumb {
   flex-shrink: 0;
-  width: 120px; height: 150px;
-  background: var(--ink);
-  color: var(--paper);
-  display: flex; align-items: center; justify-content: center;
-  text-align: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 1.1;
-  padding: 14px;
-  border-radius: 2px;
-  overflow: hidden;
+  width: 100%;
+  height: 150px;
+  background: transparent;
+  color: var(--ink);
+  display: flex; align-items: center; justify-content: flex-start;
+  overflow: visible;
+  padding: 0;
+  border-radius: 0;
 }
 .extra-thumb img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
-.extra-thumb.podcast {
-  background: var(--accent-light);
-  color: var(--ink);
-  border-radius: 50%;
-  width: 120px; height: 120px;
-  font-size: 22px;
+/* Book — bare cover, no frame, portrait */
+.extra-thumb.book img {
+  height: 150px;
+  width: auto;
 }
-.extra-thumb.intensive {
-  background: transparent;
-  width: 120px; height: 120px;
-  padding: 0;
-  border-radius: 0;
+/* Podcast — bare square logo, no circle */
+.extra-thumb.podcast img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
 }
+/* 10XGen — square icon with soft rounded corners */
 .extra-thumb.intensive img {
-  border-radius: 16px;
+  height: 130px;
+  width: 130px;
+  border-radius: 18px;
 }
-.extra-thumb.engine {
-  background: transparent;
-  width: 120px; height: 120px;
-  padding: 0;
-  border-radius: 0;
-}
+/* Influence Engine — bare mark */
 .extra-thumb.engine img {
-  width: 100%; height: 100%; object-fit: contain; display: block;
+  height: 140px;
+  width: 140px;
+  object-fit: contain;
 }
 .extra-card h4 {
   font-size: 28px;
@@ -926,13 +926,13 @@ footer .footer-logo .logo-svg { filter: brightness(0) invert(1) opacity(0.92); }
 
 /* Mobile */
 @media (max-width: 720px) {
-  body { font-size: 18px; }
+  body { font-size: 19px; }
   .container { padding: 0 22px; }
 
   /* Nav: hamburger menu on mobile */
   nav.top { padding: 18px 0; position: relative; z-index: 200; }
-  .logo-svg { width: 36px; height: 36px; }
-  .logo-words { font-size: 22px; }
+  .logo-svg { width: 46px; height: 46px; }
+  .logo-words { font-size: 26px; }
 
   /* Hamburger button */
   .nav-hamburger {
