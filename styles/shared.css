@@ -10,8 +10,8 @@
    ============================================================ */
 :root {
   --ink:         #0e4f56;   /* deep teal (logo SW) — primary text */
-  --ink-soft:    #384a50;   /* secondary text (darker for legibility) */
-  --ink-mute:    #5a6870;   /* tertiary text / metadata */
+  --ink-soft:    #4a5a60;   /* secondary text */
+  --ink-mute:    #6e7a80;   /* tertiary text / metadata */
   --paper:       #faf7f2;   /* warm cream — primary background */
   --paper-warm:  #f3ede2;   /* warm cream tinted — secondary bg */
   --accent:      #8c7853;   /* deeper brass — accent text, eyebrow */
@@ -28,9 +28,8 @@ body {
   font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
   color: var(--ink);
   background: var(--paper);
-  line-height: 1.6;
-  font-size: 20px;
-  font-weight: 500;
+  line-height: 1.55;
+  font-size: 19px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -65,10 +64,10 @@ nav.top .container {
   display: flex; align-items: center; gap: 12px;
   text-decoration: none; color: var(--ink);
 }
-.logo-svg { width: 58px; height: 58px; flex-shrink: 0; }
+.logo-svg { width: 42px; height: 42px; flex-shrink: 0; }
 .logo-words {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 500;
   letter-spacing: -0.005em;
   line-height: 1;
@@ -331,64 +330,54 @@ section .section-lead {
 .extras { background: var(--paper); }
 .extras-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
   margin-top: 14px;
 }
 .extra-card {
   background: var(--paper-warm);
-  padding: 36px 30px 34px;
+  padding: 36px 30px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
   align-items: flex-start;
   transition: background .2s;
   text-decoration: none;
   color: inherit;
 }
 .extra-card:hover { background: var(--accent-soft); }
-
-/* Thumbnail wrapper — a fixed 150px-tall region so all cards align */
+/* Uniform "Beyond the work" thumbnails — same clean rounded square for all four,
+   identical on desktop and mobile. */
 .extra-thumb {
   flex-shrink: 0;
-  width: 100%;
-  height: 150px;
-  background: transparent;
-  color: var(--ink);
+  width: 120px; height: 120px;
+  background: #0c1a1c;
   display: flex; align-items: center; justify-content: center;
-  overflow: visible;
   padding: 0;
-  border-radius: 0;
+  border-radius: 14px;
+  overflow: hidden;
 }
 .extra-thumb img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
-  display: block;
+  width: 100%; height: 100%; object-fit: contain; display: block;
 }
-/* Book — bare cover, no frame, portrait */
-.extra-thumb.book img {
-  height: 150px;
-  width: auto;
+/* Square artworks (podcast, 10XGen, Influence Engine) fill the tile edge-to-edge */
+.extra-thumb.podcast,
+.extra-thumb.intensive,
+.extra-thumb.engine {
+  background: #0c1a1c;
+  width: 120px; height: 120px;
+  padding: 0;
+  border-radius: 14px;
 }
-/* Podcast — bare square logo, no circle */
-.extra-thumb.podcast img {
-  height: 150px;
-  width: 150px;
-  object-fit: contain;
-}
-/* 10XGen — square icon with soft rounded corners */
+.extra-thumb.podcast img,
 .extra-thumb.intensive img {
-  height: 130px;
-  width: 130px;
-  border-radius: 18px;
+  object-fit: cover;
+  border-radius: 0;
 }
-/* Influence Engine — bare mark */
 .extra-thumb.engine img {
-  height: 140px;
-  width: 140px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 0;
 }
 .extra-card h4 {
   font-size: 28px;
@@ -922,18 +911,17 @@ footer .footer-logo .logo-svg { filter: brightness(0) invert(1) opacity(0.92); }
   .offerings-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .approach-grid { grid-template-columns: 1fr; gap: 36px; }
-  .extras-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Mobile */
 @media (max-width: 720px) {
-  body { font-size: 19px; }
+  body { font-size: 18px; }
   .container { padding: 0 22px; }
 
   /* Nav: hamburger menu on mobile */
   nav.top { padding: 18px 0; position: relative; z-index: 200; }
-  .logo-svg { width: 46px; height: 46px; }
-  .logo-words { font-size: 26px; }
+  .logo-svg { width: 36px; height: 36px; }
+  .logo-words { font-size: 22px; }
 
   /* Hamburger button */
   .nav-hamburger {
