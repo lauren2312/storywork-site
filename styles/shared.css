@@ -361,6 +361,11 @@ section .section-lead {
 .extra-thumb img {
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
+/* The Book: show the whole cover, sized down and centered in the tile */
+.extra-thumb:not(.podcast):not(.intensive):not(.engine) img {
+  width: auto; height: 82%; max-width: 86%;
+  object-fit: contain;
+}
 /* Square artworks (podcast, 10XGen) fill the tile edge-to-edge on the dark tile */
 .extra-thumb.podcast,
 .extra-thumb.intensive {
