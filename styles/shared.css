@@ -359,12 +359,11 @@ section .section-lead {
   overflow: hidden;
 }
 .extra-thumb img {
-  width: 100%; height: 100%; object-fit: contain; display: block;
+  width: 100%; height: 100%; object-fit: cover; display: block;
 }
-/* Square artworks (podcast, 10XGen, Influence Engine) fill the tile edge-to-edge */
+/* Square artworks (podcast, 10XGen) fill the tile edge-to-edge on the dark tile */
 .extra-thumb.podcast,
-.extra-thumb.intensive,
-.extra-thumb.engine {
+.extra-thumb.intensive {
   background: #0c1a1c;
   width: 120px; height: 120px;
   padding: 0;
@@ -375,8 +374,16 @@ section .section-lead {
   object-fit: cover;
   border-radius: 0;
 }
+/* Influence Engine: white tile, logo sized down so it sits proportionately */
+.extra-thumb.engine {
+  background: #ffffff;
+  width: 120px; height: 120px;
+  padding: 0;
+  border-radius: 14px;
+}
 .extra-thumb.engine img {
-  object-fit: cover;
+  width: 72%; height: 72%;
+  object-fit: contain;
   border-radius: 0;
 }
 .extra-card h4 {
